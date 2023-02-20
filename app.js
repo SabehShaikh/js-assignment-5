@@ -40,7 +40,7 @@ document.write("<ul><li>" + education.join("</li><li>") + "</li></ul>");
 // Assume that total marks are 500 for each student, display the scores & percentages of students like:
 document.write("<h4> Question 08 </h4>")
 
-var students = ["Sabeh", "Hamza", "Ahsan"];
+var students = ["Sabeh", "Hamza", "Haroon"];
 var score = ["450", "420", "410"];
 
 document.write("Score of " + students[0] + " is " + score[0] + " Percentage is " + (score[0] / 500) * 100 + "<br>");
@@ -113,4 +113,110 @@ var numColors = parseInt(inputArray[1]);
 
 colors.splice(index, numColors);
 
-document.write("Updated colors are: " + colors);
+document.write("Updated colors are: " + colors + "<br>");
+
+// Question 10
+// 10. Write a program to store student scores in an array & sort the array in ascending order using Array’s sort method.
+
+document.write("<h4> Question 10 </h4>")
+// // An array of student scores
+var studentScores = [88, 95, 72, 90, 85];
+document.write("Scores of students :" + " " + studentScores + "<br>")
+
+studentScores.sort(function (a, b) {
+    return a - b;
+});
+
+// Display the sorted array
+document.write("Student scores in ascending order: " + studentScores + "<br>");
+
+// Question 11
+// 11. Write a program to initialize an array with city names. 
+// Copy 3 array elements from cities array to selectedCities array.
+
+document.write("<h4> Question 11 </h4>")
+
+var cities = ["Karachi", "Lahore", "Peshawar", "Islamabad", "Quetta", "Multan"];
+document.write("City List : " + "<br>" + cities + "<br>")
+
+var selectedCities = cities.slice(3, 5)
+document.write("Selected Cities List : " + "<br>" + selectedCities + "<br>");
+
+// 12. Write a program to create a single string from the below mentioned array:
+// var arr = [“This ”, “ is ”, “ my ”, “ cat”];
+// (Use array’s join method)
+
+var arr = ["This", "is", "my", "cat"];
+var singleString = arr.join(" ");
+
+document.write("<h4> Question 12 </h4>");
+document.write("Array: " + arr + "<br>");
+document.write("Single String: " + singleString + "<br>");
+
+// 13. Create a new array. Store values one by one in such a way that you can access the values in the order in which they were stored. 
+// (FIFO-First In First Out)
+document.write("<h4> Question 13 </h4>");
+document.write("<h5> Using FIFO Method </h5>");
+var queue = [];
+
+// Stores values One by One
+queue.push("Keyboard");
+queue.push("Mouse");
+queue.push("Printor");
+queue.push("Monitor");
+
+document.write("Devices are :" + " " + queue + "<br>");
+
+// remove elements from the beginning of the queue using shift()
+var firstItem = queue.shift();
+var secondItem = queue.shift();
+var thirdItem = queue.shift();
+var fourthItem = queue.shift();
+
+document.write("Out :" + "<br>" + firstItem + "<br>");
+document.write("Out :" + "<br>" + secondItem + "<br>");
+document.write("Out :" + "<br>" + thirdItem + "<br>");
+document.write("Out :" + "<br>" + fourthItem + "<br>");
+
+// 14. Create a new array. Store values one by one in such a way that you can access the values in reverse order.
+//(Last In- First Out)
+
+document.write("<h4> Question 14 </h4>");
+
+document.write("<h5> Using LIFO Method </h5>");
+var fruits = [];
+
+// Stores values One by One
+fruits.push("Apple");
+fruits.push("Cherry");
+fruits.push("Mango");
+fruits.push("Banana");
+
+document.write("Fruits are :" + " " + fruits + "<br>");
+
+// remove elements from the end of the queue using pop()
+var lastItem = fruits.pop();
+var secondLastItem = fruits.pop();
+var thirdLastItem = fruits.pop();
+var fourthLastItem = fruits.pop();
+
+document.write("Out :" + "<br>" + lastItem + "<br>");
+document.write("Out :" + "<br>" + secondLastItem + "<br>");
+document.write("Out :" + "<br>" + thirdLastItem + "<br>");
+document.write("Out :" + "<br>" + fourthLastItem + "<br>");
+
+// Question 15
+document.write("<h4> Question 15 </h4>");
+
+// 15. Write a program to store phone manufacturers
+// (Apple, Samsung, Motorola, Nokia, Sony & Haier) in an array.
+// Display the following dropdown/select menu in your browser using document.write() method:
+
+var phoneManuFacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+
+// Create a select element with options
+var select = "<select><option>" + phoneManuFacturers.join("</option><option>") + "</option></select>";
+
+// Write the select element to the document
+document.write(" <h4> Which Brand phone would you like to choose? </h4>")
+document.write(select);
