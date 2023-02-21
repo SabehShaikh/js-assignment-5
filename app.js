@@ -220,3 +220,11 @@ var select = "<select><option>" + phoneManuFacturers.join("</option><option>") +
 // Write the select element to the document
 document.write(" <h4> Which Brand phone would you like to choose? </h4>")
 document.write(select);
+
+document.write("<h1> ARRAYS AND LOOP </h1>")
+
+document.write("<h2> Chapter 17-20 </h2>")
+
+// Question 01
+
+// 1. Declare and initialize an empty multidimensional array. (Array of arrays)
