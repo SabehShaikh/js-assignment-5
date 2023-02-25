@@ -228,3 +228,146 @@ document.write("<h2> Chapter 17-20 </h2>")
 // Question 01
 
 // 1. Declare and initialize an empty multidimensional array. (Array of arrays)
+
+var arr = [[]];
+
+//  2. Declare and initialize a multidimensional array representing the following matrix:
+
+let matrix = [
+    [0, 1, 2, 3],
+    [1, 0, 1, 2],
+    [2, 1, 0, 1]
+];
+
+console.log(matrix);
+
+// 3. Write a program to print numeric counting from 1 to 10.
+document.write("<h3> Question 03 </h3>")
+
+for (var i = 0; i <= 10; i++) {
+    document.write(i + "<br>");
+}
+
+// 4. Write a program to print multiplication table of any number using for loop.
+// Table number & length should be taken as an input from user.
+
+document.write("<h3> Question 04 </h3>")
+var tableNumber = prompt("Enter the number for the multiplication table: ");
+var tableLength = prompt("Enter the length of the multiplication table: ");
+
+for (var i = 1; i <= tableLength; i++) {
+    var result = tableNumber * i;
+    document.write(`${tableNumber} x ${i} = ${result}` + "<br>");
+}
+
+// 5. Write a program to print items of the following array using for loop:
+// fruits = [“apple”, “banana”, “mango”, “orange”, “strawberry”]
+
+var fruits = ["apple", "banana", "mango", "orange", "strawberry"];
+
+for (var i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+
+// 6. Generate the following series in your browser. See example output.
+
+// Counting: 1, 2, 3, ..., 15
+var countingSeries = "";
+for (let i = 1; i <= 15; i++) {
+    countingSeries += i + ", ";
+}
+console.log("Counting: " + countingSeries.slice(0, -2));
+
+// Reverse counting: 10, 9, 8, ..., 1
+var reverseCountingSeries = "";
+for (var i = 10; i >= 1; i--) {
+    reverseCountingSeries += i + ", ";
+}
+console.log("Reverse counting: " + reverseCountingSeries.slice(0, -2));
+
+// Even: 0, 2, 4, ..., 20
+var evenSeries = "";
+for (var i = 0; i <= 20; i += 2) {
+    evenSeries += i + ", ";
+}
+console.log("Even: " + evenSeries.slice(0, -2));
+
+// Odd: 1, 3, 5, ..., 19
+var oddSeries = "";
+for (var i = 1; i <= 19; i += 2) {
+    oddSeries += i + ", ";
+}
+console.log("Odd: " + oddSeries.slice(0, -2));
+
+// Series: 2k, 4k, 6k, ..., 20k
+var series = "";
+for (var i = 1; i <= 10; i++) {
+    series += i * 2 + "k, ";
+}
+console.log("Series: " + series.slice(0, -2));
+
+
+// 7. You have an array A = [“cake”, “apple pie”, “cookie”, “chips”, “patties”]
+// Write a program to enable “search by user input” in an array.
+// After searching, prompt the user whether the given item is found in the list or not. Example:
+document.write("<h3> Question 07 </h3>")
+
+var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+var userInput = prompt("Enter an item to search:");
+
+var isItemFound = false;
+for (let i = 0; i < A.length; i++) {
+    if (A[i] === userInput) {
+        isItemFound = true;
+        break;
+    }
+}
+
+if (isItemFound) {
+    document.write(userInput + " is available at index " + A.indexOf(userInput) + " in our bakery");
+} else {
+    document.write("Sorry, " + userInput + " is not available in our bakery");
+}
+
+// 8. Write a program to identify the largest number in the given array.
+// A = [24, 53, 78, 91, 12].
+document.write("<h3> Question 08 </h3>")
+
+
+var A = [24, 53, 78, 91, 12];
+var largest = A[0];
+
+for (let i = 1; i < A.length; i++) {
+    if (A[i] > largest) {
+        largest = A[i];
+    }
+}
+
+document.write("Array Items: " + A + "<br>");
+document.write("The largest number in the array is " + largest);
+
+// 9. Write a program to identify the smallest number in thegiven array.
+// A = [24, 53, 78, 91, 12]
+
+document.write("<h3> Question 09 </h3>")
+
+var A = [24, 53, 78, 91, 12];
+var smallest = A[0];
+
+for (let i = 1; i > A.length; i++) {
+    if (A[i] < smallest) {
+        smallest = A[i];
+    }
+}
+
+
+document.write("Array Items: " + A + "<br>");
+document.write("The smallest number in the array is " + smallest);
+
+// 10. Write a program to print multiples of 5 ranging 1 to 100.
+
+for (let i = 1; i <= 100; i++) {
+    if (i % 5 === 0) {
+        console.log(i);
+    }
+}
